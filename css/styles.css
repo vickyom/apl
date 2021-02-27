@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222831;
+  font-family: sans-serif;
+}
+
+.calculator {
+  width: 300px;
+  padding-bottom: 15px;
+  border-radius: 7px;
+  box-shadow: 5px 8px 8px -2px rgba(0, 0, 0, 0.61);
+}
+
+/* display */
+.display {
+  width: 100%;
+  height: 80px;
+  border: none;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 2rem;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 77%
+  );
+  text-align: right;
+}
+
+.enter-value {
+  width: 100%;
+  height: 20px;
+  border: none;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 1rem;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 77%
+  );
+  text-align: right;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+/* display style end */
+/* row */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* row style end */
+
+/* button */
+button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  margin: 1px;
+}
+
+.zero-width {
+  width: 160px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* button style end */
+
+/* operator */
+.operator {
+  background-color: #fdbb2d;
+  color: #000;
+}
+
+/* operator style end */
+
+/* operator-col style end */
+.operator-col {
+  background-color: #eeaeca;
+  color: #000;
+}
+
+/* operator-col style end */
