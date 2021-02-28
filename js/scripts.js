@@ -2,7 +2,7 @@
 const buttons = document.querySelectorAll("button");
 // select the <input type="text" class="display" disabled> element
 const display = document.querySelector(".display");
-// Show the enter value
+// Show the history value
 const showValue = document.querySelector(".enter-value");
 
 let arrRecords = [];
@@ -15,11 +15,9 @@ const calculate = (event) => {
   if (clickedButtonValue === "=") {
     // check if the display is not empty then only do the calculation
     if (display.value !== "") {
-      console.log(display.value.indexOf(","));
       //replace comma with space
       if (display.value.indexOf(",") > -1) {
         display.value = display.value.replace(/,/g, "");
-        console.log(display.value);
       }
       // calculate and show the answer to display
       display.value = eval(display.value);
@@ -33,15 +31,15 @@ const calculate = (event) => {
   } else {
     // otherwise concatenate it to the display
     display.value += clickedButtonValue;
-    arrRecords.push(clickedButtonValue + " ");
+    arrRecords.push(clickedButtonValue + "");
   }
 };
 
+// This function show your calculation history
 const showHistory = () => {
   let disVal = "";
   for (let i = 0; i <= arrRecords.length; i++) {
     if (arrRecords[i]) {
-      //   console.log(arrRecords[i]);
       disVal += arrRecords[i];
     }
   }
